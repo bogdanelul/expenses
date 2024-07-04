@@ -1,0 +1,8 @@
+# ----How To Install----
+
+# in folderul unde copiezi proiectul dai in terminal:
+#    npm install express sqlite3 body-parser
+# dupa ce se instaleaza dai in terminal:
+#    node server.js
+
+# ----------------------

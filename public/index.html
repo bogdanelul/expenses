@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app" class="initial">
+        <div id="reset-section">
+            <button onclick="resetData()">Reset</button>
+        </div>
+        <h1>Expenses App</h1>
+        <div id="income-section" class="income">
+            <h2>Buget:</h2>
+            <input type="number" id="income-input" placeholder="Introdu venit">
+            <button onclick="setIncome()">Seteaza buget</button>
+        </div>
+        <div id="balance-section" class="balance">
+            <h2>Balanta:</h2>
+            <p id="balance">0</p>
+        </div>
+        <div id="expenses-section" class="expenses">
+            <h2>Adauga cheltuiala</h2>
+            <input type="number" id="expense-amount" placeholder="Suma">
+            <input type="text" id="expense-category" placeholder="Categorie">
+            <input type="date" id="expense-date">
+            <button onclick="addExpense()">Adauga</button>
+            <h3>Cheltuieli</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th onclick="sortExpenses('date')">Data</th>
+                        <th onclick="sortExpenses('category')">Categorie</th>
+                        <th onclick="sortExpenses('amount')">Suma</th>
+                    </tr>
+                </thead>
+                <tbody id="expenses-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
